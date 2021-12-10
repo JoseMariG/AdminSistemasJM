@@ -12,5 +12,5 @@ services:
       - 'COUCHDB_USER=admin'
       - 'COUCHDB_PASSWORD=password'
   cliente:
-    image: 2cf66440bf7c
+    image: jgongon/adminsis_josemari:latest
 
