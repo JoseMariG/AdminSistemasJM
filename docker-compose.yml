@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  db:
+    image: apache/couchdb:latest
+    volumes:
+      - /home/couchdb/etc:/opt/couchdb/etc/local.d
+      - /home/couchdb/data:/opt/couchdb/data
+      - /home/couchdb/log:/opt/couchdb/var/log
+    ports:
+            - "5984:5984"
+    environment:
+      - 'COUCHDB_USER=admin'
+      - 'COUCHDB_PASSWORD=password'
+  cliente:
+    image: 2cf66440bf7c
+
